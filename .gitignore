@@ -1,11 +1,11 @@
 *.o
 *.a
 
+
 main.c
 testProgram
 Tester.mk
 
 
 libftTester/
-
 .vscode/

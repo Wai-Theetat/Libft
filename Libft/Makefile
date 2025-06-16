@@ -1,34 +1,34 @@
-NAME	:= libft.a
+NAME := libft.a
 
-SRCS	:= ft_memset.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
-			ft_memcmp.c ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c \
-			ft_strcat.c ft_strncat.c ft_strlcat.c ft_strchr.c ft_strrchr.c \
-			ft_strstr.c ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_atoi.c \
-			ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
+SRCS := Libc/ft_memset.c Libc/ft_bzero.c Libc/ft_memcpy.c Libc/ft_memmove.c Libc/ft_memchr.c \
+		Libc/ft_memcmp.c Libc/ft_strlen.c Libc/ft_strdup.c Libc/ft_strcpy.c Libc/ft_strncpy.c \
+		Libc/ft_strcat.c Libc/ft_strncat.c Libc/ft_strlcat.c Libc/ft_strchr.c Libc/ft_strrchr.c \
+		Libc/ft_strstr.c Libc/ft_strnstr.c Libc/ft_strcmp.c Libc/ft_strncmp.c Libc/ft_atoi.c \
+		Libc/ft_isalpha.c Libc/ft_isdigit.c Libc/ft_isalnum.c Libc/ft_isasciii.c
 
-OBJS	:= ${SRCS:.c=.o}
+OBJS := ${SRCS:.c=.o}
 
-CC      := cc
-CFLAGS   := -Wall -Werror -Wextra
+CC := cc
+CFLAGS := -Wall -Werror -Wextra
 
-RM      := rm -f
+RM := rm -f
 
-INCLUDE := include
+INCLUDE := .
 
 %.o:%.c
-	${CC} ${CFLAGS} -I${INCLUDE}  -c $< -o $@
+	${CC} ${CFLAGS} -I${INCLUDE} -c $< -o $@
 
-$(NAME) : ${OBJS}
+$(NAME): ${OBJS}
 	ar rcs ${NAME} ${OBJS}
 
-all : ${NAME} Makefile
+all: ${NAME}
 
-clean :
+clean:
 	${RM} ${OBJS}
 
-fclean : clean
+fclean: clean
 	${RM} ${NAME}
 
-re : fclean all
+re: fclean all
 
-.PHONY : all fclean clean re 
+.PHONY: all fclean clean re
