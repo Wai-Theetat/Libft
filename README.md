@@ -19,9 +19,9 @@ This project is about coding a static library in C. It includes:
 
 ---
 
-## ✅ Mandatory Functions
+## Mandatory Functions
 
-### Part 1: Libc Reimplementations
+### Part 1: Libc Reimplementations ✅
 
 Functions like:
 
@@ -30,7 +30,7 @@ Functions like:
 - Character check: `ft_isalpha`, `ft_isdigit`, `ft_isalnum`, `ft_isascii`, `ft_isprint`
 - Conversion: `ft_toupper`, `ft_tolower`, `ft_atoi`
 
-### Part 2: Additional Functions
+### Part 2: Additional Functions (WIP)
 
 - Memory/String tools: `ft_memalloc`, `ft_memdel`, `ft_strnew`, `ft_strdel`, `ft_strclr`, etc.
 - Mapping and Iteration: `ft_striter`, `ft_striteri`, `ft_strmap`, `ft_strmapi`
