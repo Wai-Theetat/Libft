@@ -26,21 +26,3 @@ This project is about coding a static library in C. It includes:
 ### Part 2: Additional Functions (WIP)
 
 ## 🌟 Bonus Functions (Optional)
-
-If you finish the mandatory part, you can implement linked list functions using this struct:
-
-```c
-typedef struct s_list
-{
-    void *content;
-    size_t content_size;
-    struct s_list *next;
-} t_list;
-
-
-```
-Functions include:
-
-ft_lstnew, ft_lstdelone, ft_lstdel
-
-ft_lstadd, ft_lstiter, ft_lstmap
