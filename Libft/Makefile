@@ -8,7 +8,7 @@ SRCS := Libc/ft_isalpha.c Libc/ft_isdigit.c Libc/ft_isalnum.c Libc/ft_isascii.c 
 		Libc/ft_strdup.c \
 		Addition/ft_substr.c Addition/ft_strjoin.c \
 		Addition/ft_strtrim.c Addition/ft_split.c Addition/ft_itoa.c \
-		Addition/ft_strmapi.c
+		Addition/ft_strmapi.c Addition/ft_striteri.c
 
 
 OBJS := ${SRCS:.c=.o}
