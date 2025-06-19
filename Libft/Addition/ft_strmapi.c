@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 12:01:39 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/06/19 12:06:34 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/06/19 13:15:10 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	int		i;
+	size_t	i;
+	size_t	len;
 	char	*res;
-
+	
 	i = 0;
+	len = ft_strlen(s);
 }
