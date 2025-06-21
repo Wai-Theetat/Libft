@@ -17,9 +17,9 @@ SRCS			:=	Libc/ft_isalpha.c Libc/ft_isdigit.c Libc/ft_isalnum.c Libc/ft_isascii.
 					Addition/ft_strmapi.c Addition/ft_striteri.c Addition/ft_putchar_fd.c \
 					Addition/ft_putstr_fd.c Addition/ft_putendl_fd.c Addition/ft_putnbr_fd.c
 
-BONUS			:=	Bonus/ft_lstnew.c Bonus/ft_lstadd_front.c Bonus/ft_lstsize.c \
-					Bonus/ft_lstlast.c Bonus/ft_lstadd_back.c Bonus/ft_lstdelone.c \
-					Bonus/ft_lstclear.c Bonus/ft_lstiter.c Bonus/ft_lstmap.c
+BONUS			:=	Bonus/ft_lstnew_bonus.c Bonus/ft_lstadd_front_bonus.c Bonus/ft_lstsize_bonus.c \
+					Bonus/ft_lstlast_bonus.c Bonus/ft_lstadd_back_bonus.c Bonus/ft_lstdelone_bonus.c \
+					Bonus/ft_lstclear_bonus.c Bonus/ft_lstiter_bonus.c Bonus/ft_lstmap_bonus.c
 
 OBJS			:=	${SRCS:.c=.o}
 BONUS_OBJS		:=	${BONUS:.c=.o}
