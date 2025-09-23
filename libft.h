@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 11:11:48 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/08/28 18:36:46 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/09/23 12:00:49 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdarg.h>
 
 // Part 1 - Libc Functions
 int		ft_isalpha(int c);
@@ -71,5 +72,14 @@ void	ft_lstdelone(t_list *lst, void (*del)(void*));
 void	ft_lstclear(t_list **lst, void (*del)(void*));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+//ft_printf
+int		ft_printf(const char *str, ...);
+int		ft_print_char(char c);
+int		ft_print_str(char *str);
+int		ft_print_pointer(void *val);
+int		ft_print_dec(int nb);
+int		ft_print_unsigned(unsigned int nb);
+int		ft_print_hex(unsigned int nb, char format);
 
 #endif

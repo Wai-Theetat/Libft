@@ -14,24 +14,15 @@ SRCS			:=	ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c	ft_isprint.c \
 					ft_strtrim.c	ft_split.c		ft_itoa.c \
 					ft_strmapi.c	ft_striteri.c	ft_putchar_fd.c \
 					ft_putstr_fd.c	ft_putendl_fd.c	ft_putnbr_fd.c \
-
-# BONUS			:=	ft_lstnew.c			ft_lstadd_front.c	ft_lstsize.c \
-# 					ft_lstlast.c		ft_lstadd_back.c	ft_lstdelone.c \
-# 					ft_lstclear.c		ft_lstiter.c		ft_lstmap.c
-
-
-# BONUS			:=	bonus/ft_lstnew_bonus.c		bonus/ft_lstadd_front_bonus.c	bonus/ft_lstsize_bonus.c \
-# 					bonus/ft_lstlast_bonus.c	bonus/ft_lstadd_back_bonus.c	bonus/ft_lstdelone_bonus.c \
-# 					bonus/ft_lstclear_bonus.c	bonus/ft_lstiter_bonus.c		bonus/ft_lstmap_bonus.c
-					
-BONUS			:=	ft_lstnew_bonus.c		ft_lstadd_front_bonus.c		ft_lstsize_bonus.c \
-					ft_lstlast_bonus.c		ft_lstadd_back_bonus.c		ft_lstdelone_bonus.c \
-					ft_lstclear_bonus.c		ft_lstiter_bonus.c			ft_lstmap_bonus.c
-					
+					ft_lstnew.c			ft_lstadd_front.c	ft_lstsize.c \
+ 					ft_lstlast.c		ft_lstadd_back.c	ft_lstdelone.c \
+ 					ft_lstclear.c		ft_lstiter.c		ft_lstmap.c \
+					ft_printf.c			ft_print_char.c		ft_print_string.c \
+					ft_print_dec.c		ft_print_hex.c		ft_print_pointer.c \
+					ft_print_unsigned.c	 \
 
 
 OBJS			:=	${SRCS:.c=.o}
-BONUS_OBJS		:=	${BONUS:.c=.o}
 
 all				:	$(NAME)
 
@@ -41,15 +32,12 @@ $(NAME)			:	$(OBJS)
 %.o				:	%.c
 	${CC} ${CFLAGS} -I. -c $< -o $@
 
-bonus			:	${BONUS_OBJS} all
-	ar rcs ${NAME} ${BONUS_OBJS}
-
 clean			:
-	${RM} ${OBJS} ${BONUS_OBJS}
+	${RM} ${OBJS}
 
 fclean			:	clean
 	${RM} ${NAME}
 
 re				:	fclean all
 
-.PHONY			:	all clean fclean re bonus
+.PHONY			:	all clean fclean re
