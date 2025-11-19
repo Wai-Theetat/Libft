@@ -23,6 +23,8 @@ This project is about coding a static library in C. It includes:
 
 ### Part 1: Libc Reimplementations ✅
 
-### Part 2: Additional Functions (WIP)
+### Part 2: Additional Functions (✅
 
-## 🌟 Bonus Functions (Optional)
+## 🌟 Bonus Functions ✅
+
+## My Own gc
