@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/27 11:11:48 by tdharmar          #+#    #+#             */
-/*   Updated: 2025/09/23 12:00:49 by tdharmar         ###   ########.fr       */
+/*   Updated: 2025/11/20 02:05:06 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,5 +81,10 @@ int		ft_print_pointer(void *val);
 int		ft_print_dec(int nb);
 int		ft_print_unsigned(unsigned int nb);
 int		ft_print_hex(unsigned int nb, char format);
+
+// Garbage Collector
+void	*ft_gc_malloc(size_t size);
+void	*ft_gc_calloc(size_t count, size_t size);
+void	ft_gc_clear(void);
 
 #endif
