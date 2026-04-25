@@ -12,8 +12,8 @@
 
 #include "libft.h"
 
-void    ft_putchar_fd(char c, int fd)
+void	ft_putchar_fd(char c, int fd)
 {
-    if (write(fd, &c, 1) < 0)
-        return ;
+	if (write(fd, &c, 1) < 0)
+		return ;
 }
