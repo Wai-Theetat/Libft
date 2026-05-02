@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 11:54:24 by tdharmar          #+#    #+#             */
-/*   Updated: 2026/05/02 11:51:30 by tdharmar         ###   ########.fr       */
+/*   Updated: 2026/05/02 12:04:09 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_append_str(char *fst, char *snd, size_t sndlen)
 	size_t	len_fst;
 	size_t	i;
 
-	if (!fst && !snd)
+	if (!fst || !snd)
 		return (NULL);
 	len_fst = ft_strlen(fst);
 	result = malloc(len_fst + sndlen + 1);

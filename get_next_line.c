@@ -6,7 +6,7 @@
 /*   By: tdharmar <tdharmar@student.42bangkok.co    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/10 11:54:10 by tdharmar          #+#    #+#             */
-/*   Updated: 2026/05/02 11:51:23 by tdharmar         ###   ########.fr       */
+/*   Updated: 2026/05/02 12:15:07 by tdharmar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ char	*ft_get_first_line(char *txt)
 	char	*line_result;
 	size_t	len;
 
+	if (!txt)
+		return (ft_calloc(1, 1));
 	len = 0;
 	line_result = ft_calloc(1, 1);
 	if (!line_result)
@@ -90,16 +92,21 @@ char	*ft_trim_first_line(char *txt)
 {
 	char	*result;
 	size_t	i;
-
+	size_t remaining_len;
+	
 	i = 0;
 	while (txt[i] && txt[i] != '\n')
 		i++;
 	if (!txt[i])
 		return (free(txt), NULL);
-	result = ft_calloc(ft_strlen(txt) - i + 1, 1);
+	remaining_len = ft_strlen(txt) - i;
+	result = ft_calloc(remaining_len + 1, 1);
 	if (!result)
+	{
+		free(txt);
 		return (NULL);
-	ft_strlcat(result, &txt[i + 1], ft_strlen(txt) - i + 1);
+	}
+	ft_strlcat(result, &txt[i + 1], remaining_len + 1);
 	free(txt);
 	return (result);
 }
