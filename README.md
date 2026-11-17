@@ -1,30 +1,20 @@
 # Libft
 
-Libft is the very first project at 42 that introduces you to building your own C library. The goal is to reimplement a selection of standard C functions, as well as create additional utility functions and, optionally, linked list manipulation tools. This library will be useful for all your future C projects during your time at 42.
+My personal C standard library, the first project of the 42 curriculum. I reuse it in all my later C projects (Minishell, Pipex, Push_Swap, Fdf).
 
----
+## What's inside
+- **libc reimplementations**: `strlen`, `memcpy`, `memmove`, `strlcpy`, `strncmp`, `atoi`, `calloc`, …
+- **String utilities**: `ft_split`, `ft_strjoin`, `ft_strtrim`, `ft_substr`, `ft_strmapi`, `ft_itoa`, …
+- **Linked list** (bonus): `ft_lstnew`, `ft_lstadd_back`, `ft_lstmap`, `ft_lstclear`, …
+- **ft_printf** and **get_next_line** built in
+- **Simple garbage collector** (`ft_gc.c`): `ft_gc_malloc` / `ft_gc_calloc` track every allocation in a list, so `ft_gc_clear()` frees everything at once. Allocation failure cleans up and exits safely.
 
-## 📚 Description
+## Build
+```bash
+make        # produces libft.a
+```
 
-This project is about coding a static library in C. It includes:
-
-- Functions from the standard C library (e.g. `strlen`, `memcpy`, etc.)
-- Utility functions for memory allocation, string manipulation, and more.
-- (Bonus) Functions to manage singly linked lists.
-
----
-
-## 🛠 Structure
-
-
----
-
-## Mandatory Functions
-
-### Part 1: Libc Reimplementations ✅
-
-### Part 2: Additional Functions (✅
-
-## 🌟 Bonus Functions ✅
-
-## My Own gc
+Use it in another project:
+```bash
+cc main.c -I. -L. -lft
+```
